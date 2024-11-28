@@ -1,0 +1,26 @@
+header {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ededed;
+    box-shadow: 0 0.125rem 1rem rgb(0 0 0 / 8%);
+    padding: 0 1.25rem;
+    background-color: #ffff;
+}
+.logo-icon {
+    height: 50px;
+}
+
+.menu-items {
+    border-left: 1px solid #dedede;
+    margin-left: 24px;
+    padding-left: 24px;
+    > a {
+        @apply mx-1;
+    
+        &.active {
+            @apply bg-slate-400;
+        }
+    }
+}

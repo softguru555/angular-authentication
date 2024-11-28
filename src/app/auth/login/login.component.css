@@ -1,0 +1,9 @@
+.container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.form-wrapper {
+    width: 50%;
+    margin-top: 2.5rem;
+}

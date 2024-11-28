@@ -1,0 +1,36 @@
+<header>
+    <div class="flex items-center">
+        <a routerLink='/home' routerLinkActive="router-link-active" >
+            <img src="/assets/logo.svg" class="logo-icon" alt="Angular Authentication"/>
+        </a>
+        <span class="text-xl font-semibold">Angular Authentication</span>
+        <div class="menu-items">
+            @for(item of menuItems; track $index) {
+                <a
+                    mat-button
+                    [routerLink]="item.link"
+                    routerLinkActive="active"
+                    #rla="routerLinkActive"
+                >
+                    <mat-icon class="text-purple-600">{{item.icon}}</mat-icon>
+                    <span class="text-purple-600">{{item.label}}</span>
+                </a>
+            }
+        </div>
+    </div>
+    <div class="flex items-center gap-4 justify-between">
+        <a mat-stroked-button routerLink="/auth/login">
+            <fa-icon [icon]="'user'" class="text-purple-600" />
+            <span class="aa--ml-2 aa--hidden lg:aa--inline text-purple-600">Login</span>
+        </a>
+        <a
+            href="https://github.com/softguru555/angular-authentication"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="aa--ml-4 aa--text-2xl"
+            [matTooltip]="'Source code'"
+            >
+            <fa-icon [icon]="['fab', 'github']" />
+    </a>
+    </div>
+</header>
